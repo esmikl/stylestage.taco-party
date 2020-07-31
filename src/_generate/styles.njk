@@ -1,0 +1,12 @@
+---
+pagination:
+  data: styles
+  size: 1
+  alias: style 
+  addAllPagesToCollections: true
+permalink: "/styles/{{ style.title | slug }}/"
+eleventyComputed:
+  date: "{{ style.date }}"
+tags: styles 
+layout: base
+---

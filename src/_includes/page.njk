@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Generated from the 11ty Netlify Jumpstart: https://github.com/5t3ph/11ty-netlify-jumpstart -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }} | {{ meta.siteName }}</title>
+    <meta name="description" content="{{ description }}" />
+    <link href="{{ '/styles/css/main-stage.css' | url }}" rel="stylesheet" />
+    <link rel="icon" href="{{ '/favicon.png' | url }}" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed for {{ meta.siteName }}"
+      href="/feed/"
+    />
+    <style>
+    header {
+      padding-bottom: 0;
+      min-height: unset;
+    }
+    main {
+      padding-bottom: 10vh;
+    }
+    {% if page.url == '/styles/' %}
+    main {
+      padding-top: 0;
+    }
+    #styles {
+      margin: 0;
+    }
+    #main h2 {
+      background-color: unset;
+      color: var(--color-primary);
+    }
+    .features__flexible {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -.5rem;
+      margin-right: -.5rem;
+      width: calc(100% + 1rem);
+    }
+    .features__flexible li {
+      background-color:rgba(213, 34, 87, 0.3);
+      flex: 1 1 20ch;
+      margin: .5rem;
+    }
+    /* Gap for flex is currently only available in Firefox, so we have to extra scope it */
+    @supports (gap: 1rem) and (-moz-appearance: none) {
+      .features__flexible {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        width: 100%;
+        gap: 1rem;
+      }
+      .features__flexible li {
+        margin: 0;
+      }
+    }
+    .features__flexible li span {
+      border: none;
+    }
+    .features__flexible li:nth-child(even) {
+      background-color: rgba(58, 3, 255, 0.1);
+    }
+    .features__flexible li:nth-child(even) span {
+      background-color: var(--color-primary);
+    }
+    .features__flexible a span {
+      width: 100%;
+    }
+    .features__flexible a span::after {
+      content: "✓ Viewed!";
+      position: absolute;
+      bottom: 0.5em;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      color: #D7BEC7;
+    }
+    .features__flexible li:nth-child(even) a span::after {
+      color: #C3E3F9;
+    }
+    .features__flexible a:visited span::after {
+      color: var(--color-secondary);
+    }
+    .features__flexible li:nth-child(even) a:visited span::after {
+      color: var(--color-primary);
+    }
+    {% endif %}
+    {% if page.url == '/guidelines/' or page.url == '/thanks/' or page.url == '/subscribe/' %}
+    article p:first-of-type {
+      font-size: var(--font-size-h4);
+      text-align: center;
+      align-self: stretch;
+    }
+    {% endif %}
+    {% if page.url == '/thanks/' %}
+    article p, article h3 {
+      text-align: center; 
+      width: 100%;
+    }
+    article h3 { 
+      width: 100%;
+    }
+    {% endif %}
+    {% if page.url === '/subscribe/' %}
+    form {
+      display: grid;
+      grid-gap: 1rem;
+      align-self: center;
+      margin-top: 2rem;
+    }
+    form div {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    form label {
+      width: 6ch;
+      font-family: inherit;
+      font-size: var(--font-size-h4);
+      font-weight: var(--font-weight-strong);
+    }
+    form input {
+      border: 2px solid var(--color-primary);
+      padding: .5rem 1rem;
+      font-size: 1.125rem;
+      color: inherit;
+      min-width: 300px;
+      width: 100%;
+      transition: 180ms box-shadow ease-in;
+    }
+    form input:focus {
+      box-shadow: 0.3em 0.3em var(--color-secondary);
+    }
+    form button {
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    {% endif %}
+    {% if page.url === '/resources/' %}
+    #main h2 {
+      background-color: unset;
+      color: var(--color-primary);
+    }
+    a.link {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    {% endif %}
+    </style>
+  </head>
+  <body class="page">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    {% include "nav.njk" %}
+    <header>
+      <div class="container">
+        <h1>{{ title }}</h1>
+      </div>
+    </header>
+    {% if page.url == '/styles/' %}
+    {% include "features.njk" %}
+    {% endif %}
+    <main id="main">
+      <div class="container">
+        <article id="about">
+          <section class="container">
+            {{ content | safe }}
+            {% if page.url === '/subscribe/' %}
+            {% include "subscribe.njk" %}
+            {% endif %}
+          </section>
+        </article>
+      </div>
+    </main>
+    {% if page.url !== '/styles/' and page.url !== '/support/' and page.url !== '/resources/' %}
+    {% include "features.njk" %}
+    {% endif %}
+    {% include "footer.njk" %}
+    {% include 'sponsor-footer.njk' %}
+  </body>
+</html>

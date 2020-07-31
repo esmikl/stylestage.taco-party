@@ -1,0 +1,19 @@
+# dependencies installed by npm
+node_modules
+
+# build artefacts
+public
+src/css
+src/newsletter/*.md
+src/_data/styles.json
+functions/*.json
+functions/*.html
+functions/*.css
+
+# secrets and errors
+.env
+.log
+
+# macOS related files
+.DS_Store
+
