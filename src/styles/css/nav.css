@@ -1,0 +1,100 @@
+.svg {
+  position: absolute;
+  width: 0;
+  height: 0; }
+
+nav {
+  max-width: 1280px;
+  margin: auto; }
+  @media (min-width: 960px) {
+    nav:before {
+      content: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0' y='0' viewBox='0 0 503 36' xml:space='preserve'%3E%3Cstyle%3E.st0%7Bfill:none;stroke:%23000;stroke-miterlimit:10%7D%3C/style%3E%3Cpath d='M500 4.4C445.7 20.5 356.2 31 255 31 150.5 31 58.5 19.8 4.8 2.8' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10'/%3E%3C/svg%3E");
+      background-size: cover;
+      display: block;
+      margin-top: -15px; } }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    @media (min-width: 960px) {
+      nav ul {
+        justify-content: space-evenly;
+        flex-direction: row; } }
+    nav ul li {
+      display: flex;
+      position: relative;
+      flex: 1;
+      text-align: center; }
+      @media (min-width: 960px) {
+        nav ul li {
+          margin: 1rem; }
+          nav ul li:nth-of-type(1) {
+            margin-top: -3.875rem;
+            transform: rotate(11deg);
+            clip-path: polygon(50% 0%, 100% 0, 100% 77%, 50% 63%, 0 77%, 0 0); }
+          nav ul li:nth-of-type(2) {
+            margin-top: -2.1rem;
+            transform: rotate(5.5deg);
+            clip-path: polygon(50% 0%, 100% 0, 122% 100%, 50% 77%, 0 93%, 0 0); }
+          nav ul li:nth-of-type(3) {
+            margin-top: -1.15rem;
+            transform: rotate(2deg);
+            clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 82%, 0 100%, 0 0); }
+          nav ul li:nth-of-type(4) {
+            margin-top: -1.2rem;
+            transform: rotate(-1.6deg);
+            clip-path: polygon(50% 0%, 100% 0, 104% 100%, 50% 82%, 0 100%, 0 0); }
+          nav ul li:nth-of-type(5) {
+            margin-top: -1.9rem;
+            transform: rotate(-5deg);
+            clip-path: polygon(50% 0%, 100% 0, 100% 93%, 50% 77%, 0 94%, 0 0); }
+          nav ul li:nth-of-type(6) {
+            margin-top: -3.7rem;
+            transform: rotate(-10.5deg);
+            clip-path: polygon(50% 0%, 100% 0, 100% 81%, 50% 69%, 0 82%, 0 0); } }
+      nav ul li a {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 3rem 1rem 1rem;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
+        font-size: 1.5rem;
+        font-weight: normal; }
+        nav ul li a:hover, nav ul li a:focus {
+          outline: none; }
+          nav ul li a:hover::after, nav ul li a:focus::after {
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 293 207'%3E%3Cstyle%3E.st0%7Bfill:%23fff%7D%3C/style%3E%3Cg id='Layer_2'%3E%3Cellipse class='st0' cx='54' cy='54.5' rx='38' ry='23.5'/%3E%3Cellipse class='st0' cx='236.8' cy='54.5' rx='38' ry='23.5'/%3E%3Cellipse transform='rotate(-42.617 211.424 121.473)' class='st0' cx='211.4' cy='121.5' rx='23.5' ry='38'/%3E%3Cellipse class='st0' cx='146.3' cy='145' rx='23.5' ry='38'/%3E%3Cellipse transform='rotate(-51.54 78.96 118.666)' class='st0' cx='79' cy='118.7' rx='38' ry='23.5'/%3E%3Ccircle class='st0' cx='148.1' cy='52.7' r='21.7'/%3E%3C/g%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 44%;
+            height: 55%;
+            bottom: 0; }
+        @media (min-width: 960px) {
+          nav ul li a {
+            height: 7.5rem; } }
+
+nav ul li:nth-of-type(1) a {
+  background-color: #f08b2c; }
+
+nav ul li:nth-of-type(2) a {
+  background-color: #139c49; }
+
+nav ul li:nth-of-type(3) a {
+  background-color: #16bcee; }
+
+nav ul li:nth-of-type(4) a {
+  background-color: #80009e; }
+
+nav ul li:nth-of-type(5) a {
+  background-color: #f08b2c; }
+
+nav ul li:nth-of-type(6) a {
+  background-color: #139c49; }

@@ -1,0 +1,83 @@
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+
+body {
+  background: linear-gradient(217deg, #e64e93, #f08b2c 70.71%);
+  background-repeat: no-repeat;
+  font-family: "Heebo", sans-serif;
+  font-size: 1.15rem;
+  font-weight: normal;
+  padding: 0;
+  margin: 0; }
+
+header {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 348 188'%3E%3Cpath fill='%23fad63b' d='M0 0v172h14v-31l5 35h9l4-27 4 32h11l8-49v44l12-1 3-40 4 39 12 7v-41l13 41h10l6-47 3 44h10v-38l6 37 11-30v34l12-3 1-10.5 3-33.5 4 35 9 2 4-36 4 38h10l4-42v50h13l4-41 3 29 12 2 4-36 3 39h6l6-34v48h9l5-50 2 28 9 2 5-25v39l14-25v31h13v-51l5 36 11-1v-34l2 44 12-1 4-49 4 36 6-1V0z'/%3E%3Cpath fill='%23f08b2c' d='M0 0v115h14V84l5 35h9l4-27 4 32h11l8-49v44l12-1 3-40 4 39 12 7V83l13 41h10l6-47 3 44h10V83l6 37 11-30v34l12-3 1-10.5 3-33.5 4 35 9 2 4-36 4 38h10l4-42v50h13l4-41 3 29 12 2 4-36 3 39h6l6-34v48h9l5-50 2 28 9 2 5-25v39l14-25v31h13V80l5 36 11-1V81l2 44 12-1 4-49 4 36 6-1V0z'/%3E%3Cpath fill='%23e64e93' d='M0 0v66h14V35l5 35h9l4-27 4 32h11l8-49v44l12-1 3-40 4 39 12 7V34l13 41h10l6-47 3 44h10V34l6 37 11-30v34l12-3 1-10.5 3-33.5 4 35 9 2 4-36 4 38h10l4-42v50h13l4-41 3 29 12 2 4-36 3 39h6l6-34v48h9l5-50 2 28 9 2 5-25v39l14-25v31h13V31l5 36 11-1V32l2 44 12-1 4-49 4 36 6-1V0z'/%3E%3C/svg%3E");
+  background-size: auto 50%;
+  background-repeat: repeat-x; }
+  header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1100px; }
+  header p {
+    margin: 0 0 3rem; }
+
+.skip-link {
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute; }
+  .skip-link:focus {
+    width: auto;
+    height: auto;
+    position: static;
+    line-height: 1.5;
+    margin-left: 1rem; }
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem; }
+
+.link-github {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem 0.25rem;
+  justify-content: center;
+  border: 5px solid white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  transition: background-color ease-in-out, 300ms; }
+  .link-github:hover, .link-github:focus {
+    background-color: #e64e93; }
+    .link-github:hover svg, .link-github:focus svg {
+      animation-duration: 2s;
+      animation-name: spin; }
+  .link-github span {
+    margin-right: 0.5rem; }
+  .link-github svg {
+    width: 2rem;
+    height: 2rem;
+    fill: white; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+#guidelines p:first-of-type {
+  font-size: 2rem; }
