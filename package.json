@@ -37,7 +37,7 @@
     "emoji-regex": "^9.0.0",
     "fast-glob": "^3.2.4",
     "luxon": "^1.23.0",
-    "markdown-it": "^11.0.0",
+    "markdown-it": "^12.3.2",
     "markdown-it-anchor": "^5.2.7",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.11.0",
