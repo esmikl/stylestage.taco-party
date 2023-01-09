@@ -36,7 +36,7 @@
     "dotenv": "^8.2.0",
     "emoji-regex": "^9.0.0",
     "fast-glob": "^3.2.4",
-    "luxon": "^1.23.0",
+    "luxon": "^2.5.2",
     "markdown-it": "^11.0.0",
     "markdown-it-anchor": "^5.2.7",
     "node-fetch": "^2.6.0",
